@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+    </style>
+  </head>
+  <body>
+    <script type="module">
+      import { CONFIG_JUEGO_PRODHAB } from "https://cdn.jsdelivr.net/gh/AlbinJunLiang/PRODHAB-Games/vanillaJSESModule/src/juegosEnvironments.js";
+
+      import "https://cdn.jsdelivr.net/gh/AlbinJunLiang/PRODHAB-Games/vanillaJSESModule/src/components/test/test-component.js";
+
+      const rootPath =
+        " https://albinjunliang.github.io/PRODHAB-Games/vanillaJSESModule/";
+
+      CONFIG_JUEGO_PRODHAB.setJsonUrl(
+        "https://cdn.jsdelivr.net/gh/AlbinJunLiang/PRODHAB-Games/vanillaJSESModule/juegos.json"
+      );
+      const testComp = document.createElement("test-component");
+      testComp.setAttribute("correcta_svg", rootPath+"public/images/correcta.svg");
+      testComp.setAttribute("incorrecta_svg", rootPath+"public/images/incorrecta.svg");
+      testComp.setAttribute("character_png", rootPath+"public/images/superdato_2.png");
+      testComp.setAttribute("id-test", "1");
+      document.body.appendChild(testComp);
+    </script>
+  </body>
+</html>
